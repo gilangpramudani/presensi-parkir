@@ -79,7 +79,7 @@ function QRScanDatang({ dataSesi, dataTukang }) {
                     "tukang_id": tukangId
                 }
             })
-            console.log(res, "a0a0a0a033")
+            console.log(res.data.insert_presensi.returning, "a0a0a0a033")
             // {
 
 
@@ -130,7 +130,7 @@ function QRScanDatang({ dataSesi, dataTukang }) {
                             <button onClick={() => {
                                 const qrScannerW = new QrScanner(video.current, (result) => { handleScan(result) }, {
                                     highlightScanRegion: true,
-                                    maxScansPerSecond: 0.5
+                                    maxScansPerSecond: 0.4
                                 });
                                 setQrScanner(qrScannerW);
                                 qrScannerW.start();
@@ -150,7 +150,7 @@ function QRScanDatang({ dataSesi, dataTukang }) {
                         asdsada
                     </div> */}
                         <div className="flex items-center justify-center w-full h-full  overflow-hidden">
-                            <div className="scale-[2]">
+                            <div className="scale-[1.5]">
                                 <div>
                                     <video ref={video} className=""></video>
                                 </div>
