@@ -33,3 +33,24 @@ export const POST_UPSERT_PRESENSI_DATANG = gql`
     }
   }
   `
+
+export const POST_UPDATE_PRESENSI_PERGI = gql`
+  mutation ($id:String, $jenis_presensi_pergi: String, $pergi:String) {
+    update_presensi(where: {id: {_eq: $id}, pergi: {_eq: ""}, jenis_presensi_pergi: {_eq:""}}, _set: {jenis_presensi_pergi:  $jenis_presensi_pergi, pergi: $pergi}) {
+      returning {
+        id
+        jenis_presensi_pergi
+        pergi
+        tukang_id
+        sesi_id
+      }
+    }
+  }
+  `
+export const GET_CHECK_APAKAH_DATANG = gql`
+  query($id: String){
+    presensi(where:{id:{_eq:$id}}){
+      id
+    }
+  }
+  `

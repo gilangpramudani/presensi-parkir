@@ -5,9 +5,9 @@ import { Notification } from "./notifikasi";
 export default function Dashboard({ title, children }) {
     return (
         <>
-            <Kepala title={title} />
+            {/* <Kepala title={title} /> */}
             <Notification />
-            <main className="px-5 py-6 h-screen">
+            <main className="px-5 py-6">
                 {/* <Navigation /> */}
                 {children}
             </main>

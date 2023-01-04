@@ -10,7 +10,7 @@ export default function Kepala({ title }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+            <NextNProgress color="#fadc16" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
 
         </>
     )
